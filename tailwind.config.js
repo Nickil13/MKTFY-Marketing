@@ -53,6 +53,7 @@ module.exports = {
 
         extend: {
             backgroundImage: {
+                hero: "url(../images/Homepage_image.png)",
                 "login-clouds": "url(../assets/images/background_begin.svg)",
                 "gray-clouds": "url(../assets/images/background_grey.svg)",
                 "about-header":
@@ -97,7 +98,7 @@ module.exports = {
                 "modal-lg": "1360px",
                 card: "236px",
                 btn: "345px",
-                desktop: "1645px",
+                desktop: "1136px",
             },
             borderRadius: {
                 10: "10px",

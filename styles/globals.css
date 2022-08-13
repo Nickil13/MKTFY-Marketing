@@ -5,3 +5,15 @@
 html {
     font-family: "Open Sans", "sans-serif";
 }
+
+@layer components {
+    .container {
+        @apply max-w-desktop mx-auto w-4/5 2xl:w-full;
+    }
+    .btn {
+        @apply text-white font-bold rounded-full shadow-btn disabled:bg-gray-100 disabled:shadow-none disabled:pointer-events-none text-base py-[19px] w-full;
+    }
+    .btn-gold {
+        @apply btn bg-gold-200 hover:bg-gold-100;
+    }
+}

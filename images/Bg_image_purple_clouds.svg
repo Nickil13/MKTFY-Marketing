@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="639.508" height="848" viewBox="0 0 639.508 848">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1986" data-name="Rectangle 1986" width="639.508" height="848" transform="translate(-0.099 0.156)" fill="#6318af"/>
+    </clipPath>
+    <filter id="clouds_back" x="-142.265" y="163.449" width="966.137" height="499.036" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="clouds_mid" x="-142.265" y="286.74" width="966.137" height="499.035" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="clouds_front" x="-142.265" y="409.029" width="966.137" height="499.035" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-3"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Bg_image_purple_clouds" transform="translate(2.263 -1842.999)">
+    <g id="Mask_Group_4" data-name="Mask Group 4" transform="translate(-2.164 1842.844)" clip-path="url(#clip-path)">
+      <rect id="Rectangle_1985" data-name="Rectangle 1985" width="639.508" height="848" transform="translate(-0.099 -1.937)" fill="#6318af"/>
+      <g id="Clouds" transform="translate(-112.364 190.605)">
+        <g transform="matrix(1, 0, 0, 1, 112.26, -190.45)" filter="url(#clouds_back)">
+          <path id="clouds_back-2" data-name="clouds_back" d="M0,229.027C0,113.044,94.471,19.02,211.007,19.02A210.727,210.727,0,0,1,342.873,65.07a171.4,171.4,0,0,1,94.872-7.779A179.806,179.806,0,0,1,676.781,35.623a180.08,180.08,0,0,1,50.2-7.094c98.946,0,179.157,79.831,179.157,178.308S825.926,385.146,726.98,385.146a178.915,178.915,0,0,1-107.46-35.623,181.1,181.1,0,0,1-103.017-.782,170.546,170.546,0,0,1-163.044,35.216,210.816,210.816,0,0,1-142.452,55.078C94.471,439.035,0,345.011,0,229.027Z" transform="translate(-112.26 190.45)" fill="#560f9f"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 112.26, -190.45)" filter="url(#clouds_mid)">
+          <path id="clouds_mid-2" data-name="clouds_mid" d="M552.678,383.957a170.546,170.546,0,0,1-163.044-35.216,181.1,181.1,0,0,1-103.017.782,178.914,178.914,0,0,1-107.46,35.623C80.211,385.146,0,305.315,0,206.838S80.211,28.529,179.157,28.529a180.073,180.073,0,0,1,50.2,7.094A179.806,179.806,0,0,1,468.392,57.29a171.4,171.4,0,0,1,94.872,7.78A210.727,210.727,0,0,1,695.13,19.02c116.536,0,211.008,94.024,211.008,210.007S811.665,439.035,695.13,439.035A210.816,210.816,0,0,1,552.678,383.957Z" transform="translate(-112.26 313.74)" fill="#6e20be"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 112.26, -190.45)" filter="url(#clouds_front)">
+          <path id="clouds_front-2" data-name="clouds_front" d="M0,229.027C0,113.044,94.471,19.02,211.007,19.02A210.727,210.727,0,0,1,342.873,65.07a171.4,171.4,0,0,1,94.872-7.779A179.806,179.806,0,0,1,676.781,35.623a180.08,180.08,0,0,1,50.2-7.094c98.946,0,179.157,79.831,179.157,178.308S825.926,385.146,726.98,385.146a178.915,178.915,0,0,1-107.46-35.623,181.1,181.1,0,0,1-103.017-.782,170.546,170.546,0,0,1-163.044,35.216,210.816,210.816,0,0,1-142.452,55.078C94.471,439.035,0,345.011,0,229.027Z" transform="translate(-112.26 436.03)" fill="#9349de"/>
+        </g>
+        <rect id="Area" width="640.511" height="931.196" transform="translate(112.265 502.185)" fill="#9349de"/>
+      </g>
+    </g>
+  </g>
+</svg>

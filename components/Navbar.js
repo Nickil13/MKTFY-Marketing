@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <nav className="h-[268px] bg-purple-500">
             {/* Container */}
-            <div className="flex flex-col justify-end items-start h-full max-w-[1136px] mx-auto w-4/5 2xl:w-full py-3">
+            <div className="flex flex-col justify-end items-start h-full container py-3">
                 <p className="text-sm-17 mb-auto text-white">
                     Buy and sell stuff!{" "}
                     <span className="text-gold-200">Register for MKTFY</span>
