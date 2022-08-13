@@ -54,7 +54,8 @@ module.exports = {
         extend: {
             backgroundImage: {
                 hero: "url(../images/Homepage_image.png)",
-                "login-clouds": "url(../assets/images/background_begin.svg)",
+                "quality-banner": "url(../images/banner_devices.png)",
+                "login-clouds": "url(../images/Bg_image_purple_clouds.svg)",
                 "gray-clouds": "url(../assets/images/background_grey.svg)",
                 "about-header":
                     "url(../assets/images/Image_about_us_header.png)",

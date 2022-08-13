@@ -2,8 +2,9 @@ import Head from "next/head";
 import AccessibleImage from "../images/Icon_image_accessible.svg";
 import HonestImage from "../images/icon_image_honest.svg";
 import EasyPayImage from "../images/icon_image_easypay.svg";
-
 import FeatureCard from "../components/FeatureCard";
+import PhoneImage from "../images/Mobile_mockup_MKFY.png";
+import Image from "next/image";
 
 export default function Home() {
     return (
@@ -19,7 +20,7 @@ export default function Home() {
             {/* Hero */}
             <div className=" bg-hero bg-cover bg-no-repeat py-20 2xl:py-36">
                 <div className="container h-full flex flex-col justify-center">
-                    <h1 className="font-bold text-[60px] 2xl:text-[80px] text-white leading-[70px] 2xl:leading-[82px] mb-4 max-w-[765px]">
+                    <h1 className="font-bold text-[60px] 2xl:text-[80px] text-white leading-[70px] 2xl:leading-[82px] mb-5 max-w-[765px]">
                         Buy and sell stuff on Market For You
                     </h1>
                     <p className="text-white font-semibold text-base max-w-md leading-7">
@@ -46,6 +47,64 @@ export default function Home() {
                         Arrange payments with between you and our trusted users.
                         Our application makes it easy to communicate.
                     </FeatureCard>
+                </div>
+            </section>
+            {/* Quality Banner */}
+            <section className="bg-quality-banner h-[482px]">
+                <div className="container h-full flex flex-col justify-center">
+                    <h2 className="font-bold text-lg text-white mb-5">
+                        MKTFY assures the quality of your purchase
+                    </h2>
+                    <p className="text-white font-semibold text-base max-w-[417px] leading-7">
+                        MKTFY wants to make sure that the stuff you buy is in
+                        working order or your money back. Find out more about
+                        our protection policy.
+                    </p>
+                </div>
+            </section>
+            {/* How it works */}
+            <section className="relative h-[848px]">
+                <div className="bg-login-clouds w-[637px] h-full"></div>
+                <div className="absolute top-0 flex h-full w-full justify-center">
+                    <Image src={PhoneImage} alt="mobile app on phone" />
+                    <ul className="px-4 pt-32 max-w-[500px]">
+                        <li className="mb-12">
+                            <h3 className="text-gray-500 text-base font-bold ">
+                                <span className="mr-6 text-[30px]">1</span>
+                                Register and log-in
+                            </h3>
+                            <p className="mr-6 text-gray-footer text-base">
+                                Register as a user on our Market For You App or
+                                web portal through our easy sign-up form. After
+                                you have verified your credentials log-in to
+                                MKTFY and start browsing!
+                            </p>
+                        </li>
+                        <li className="mb-12">
+                            <h3 className="text-gray-500 text-base font-bold ">
+                                <span className="mr-6 text-[30px]">2</span>
+                                Register and log-in
+                            </h3>
+                            <p className="mr-6 text-gray-footer text-base">
+                                Register as a user on our Market For You App or
+                                web portal through our easy sign-up form. After
+                                you have verified your credentials log-in to
+                                MKTFY and start browsing!
+                            </p>
+                        </li>
+                        <li>
+                            <h3 className="text-gray-500 text-base font-bold">
+                                <span className="mr-6 text-[30px]">3</span>
+                                Register and log-in
+                            </h3>
+                            <p className="mr-6 text-gray-footer text-base">
+                                Register as a user on our Market For You App or
+                                web portal through our easy sign-up form. After
+                                you have verified your credentials log-in to
+                                MKTFY and start browsing!
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </div>
