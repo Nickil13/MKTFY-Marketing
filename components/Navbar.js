@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import logo from "../images/logo.svg";
+import Navlink from "./Navlink";
 
 export default function Navbar() {
     return (
@@ -14,10 +15,10 @@ export default function Navbar() {
                 <Image src={logo} width={138} height={30} alt="mktfy logo" />
                 <div className="flex items-end justify-between w-full">
                     <ul className="flex gap-14 text-white text-base font-semibold mt-14">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>News</li>
-                        <li>Contact</li>
+                        <Navlink path="/">Home</Navlink>
+                        <Navlink path="/about">About</Navlink>
+                        <Navlink path="/news">News</Navlink>
+                        <Navlink path="/contact">Contact</Navlink>
                     </ul>
                     <div className="text-white text-base font-semibold mt-14">
                         <button className="mr-15 ">Register</button>

@@ -1,4 +1,9 @@
 import Head from "next/head";
+import AccessibleImage from "../images/Icon_image_accessible.svg";
+import HonestImage from "../images/icon_image_honest.svg";
+import EasyPayImage from "../images/icon_image_easypay.svg";
+
+import FeatureCard from "../components/FeatureCard";
 
 export default function Home() {
     return (
@@ -13,8 +18,8 @@ export default function Home() {
             </Head>
             {/* Hero */}
             <div className=" bg-hero bg-cover bg-no-repeat py-20 2xl:py-36">
-                <div className="container h-full flex flex-col justify-center max-w-[765px]">
-                    <h1 className="font-bold text-[60px] 2xl:text-[80px] text-white leading-[70px] 2xl:leading-[82px] mb-4">
+                <div className="container h-full flex flex-col justify-center">
+                    <h1 className="font-bold text-[60px] 2xl:text-[80px] text-white leading-[70px] 2xl:leading-[82px] mb-4 max-w-[765px]">
                         Buy and sell stuff on Market For You
                     </h1>
                     <p className="text-white font-semibold text-base max-w-md leading-7">
@@ -28,7 +33,20 @@ export default function Home() {
             </div>
             {/* Features */}
             <section>
-                <div className="container"></div>
+                <div className="container flex justify-between py-15">
+                    <FeatureCard image={AccessibleImage} title="Accessible">
+                        Access MKTFY from anywhere in the world with our easy to
+                        use app. Need a power cable in Italy? We can help!
+                    </FeatureCard>
+                    <FeatureCard image={HonestImage} title="Honest">
+                        Safety and trust are core values of MKTFY. All your
+                        transactions are monitored for fairness and safety.
+                    </FeatureCard>
+                    <FeatureCard image={EasyPayImage} title="Easy Payments">
+                        Arrange payments with between you and our trusted users.
+                        Our application makes it easy to communicate.
+                    </FeatureCard>
+                </div>
             </section>
         </div>
     );
