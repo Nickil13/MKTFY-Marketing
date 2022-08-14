@@ -8,6 +8,9 @@ import HeartImage from "../images/icon_image_heart_hands.svg";
 import TransactionImage from "../images/icon_image_transactions.svg";
 import Image from "next/image";
 import StatisticCard from "../components/StatisticCard";
+import bg from "../images/image_blog_carousel1.png";
+import bg2 from "../images/image_carousel_blog2.png";
+import BlogCard from "../components/BlogCard";
 
 export default function Home() {
     return (
@@ -58,7 +61,7 @@ export default function Home() {
                     <h2 className="font-bold text-lg text-white mb-5">
                         MKTFY assures the quality of your purchase
                     </h2>
-                    <p className="text-white font-semibold text-base max-w-[417px] leading-7">
+                    <p className="text-white font-semibold text-base max-w-text leading-7">
                         MKTFY wants to make sure that the stuff you buy is in
                         working order or your money back. Find out more about
                         our protection policy.
@@ -151,6 +154,33 @@ export default function Home() {
                         value="50+"
                         title="Partnered Charities"
                     />
+                </div>
+            </section>
+
+            {/* Blog section */}
+            <section>
+                <div className="container py-32">
+                    <div className="flex justify-between mb-20">
+                        <h2 className="text-gray-500 font-bold text-lg">
+                            Blog
+                        </h2>
+                        <button className="text-gold-200 text-base font-bold">
+                            Visit Blog &gt;
+                        </button>
+                    </div>
+                    {/* Blog entries slider */}
+                    <div className="flex gap-10 overflow-x-auto">
+                        <BlogCard
+                            imageUrl={bg.src}
+                            title="Finding the right sanding desk on MKTFY"
+                            date="BLOG - NOVEMBER 22, 2022"
+                        />
+                        <BlogCard
+                            imageUrl={bg2.src}
+                            title="Make memories with MKTFY Event Stuff"
+                            date="BLOG - NOVEMBER 12, 2022"
+                        />
+                    </div>
                 </div>
             </section>
         </div>

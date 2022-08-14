@@ -56,6 +56,7 @@ module.exports = {
                 hero: "url(../images/Homepage_image.png)",
                 "quality-banner": "url(../images/banner_devices.png)",
                 "handshake-banner": "url(../images/banner_handshake.png)",
+                footer: "url(../images/Footer_banner_bg.svg)",
             },
             width: {
                 btn: "345px",
@@ -79,9 +80,6 @@ module.exports = {
                 nav: "191px",
                 "mobile-nav": "290px",
             },
-            minHeight: {
-                "listing-card": "312px",
-            },
             maxHeight: {
                 menu: "calc(100vh - 225px)",
             },
@@ -89,10 +87,7 @@ module.exports = {
                 card: "236px",
             },
             maxWidth: {
-                input: "532px",
-                modal: "808px",
-                "modal-lg": "1360px",
-                card: "236px",
+                text: "417px",
                 btn: "345px",
                 desktop: "1136px",
             },
@@ -101,13 +96,6 @@ module.exports = {
             },
             boxShadow: {
                 btn: "0px 5px 20px #00000024",
-                modal: "0px 7px 12px #00000024",
-                dropdown: "0px 3px 6px #00000029",
-                card: "0px 4px 15px #00000024",
-            },
-            backgroundPosition: {
-                "cloud-position": "50% 20%",
-                "banner-position": "10% 20%",
             },
         },
     },
