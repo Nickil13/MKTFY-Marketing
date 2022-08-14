@@ -54,6 +54,7 @@ module.exports = {
         extend: {
             backgroundImage: {
                 hero: "url(../images/Homepage_image.png)",
+                "login-clouds": "url(../images/Bg_image_purple_clouds.svg)",
                 "quality-banner": "url(../images/banner_devices.png)",
                 "handshake-banner": "url(../images/banner_handshake.png)",
                 footer: "url(../images/Footer_banner_bg.svg)",
@@ -80,11 +81,11 @@ module.exports = {
                 nav: "191px",
                 "mobile-nav": "290px",
             },
+            minHeight: {
+                "listing-card": "312px",
+            },
             maxHeight: {
                 menu: "calc(100vh - 225px)",
-            },
-            minWidth: {
-                card: "236px",
             },
             maxWidth: {
                 text: "417px",
@@ -97,7 +98,9 @@ module.exports = {
             boxShadow: {
                 btn: "0px 5px 20px #00000024",
             },
+            gridTemplateColumns: {
+                footer: "repeat(3, 272px)",
+            },
         },
     },
-    plugins: [],
 };

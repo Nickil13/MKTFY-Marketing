@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../images/logo.svg";
+import logo from "../../images/logo.svg";
 import Navlink from "./Navlink";
 
 export default function Navbar() {

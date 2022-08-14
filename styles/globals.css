@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    font-family: "Open Sans", "sans-serif";
+@layer base {
+    html {
+        font-family: "Open Sans", "sans-serif";
+    }
+    li > a {
+        @apply hover:text-gold-200;
+    }
 }
 
 @layer components {

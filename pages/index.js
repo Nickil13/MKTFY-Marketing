@@ -2,15 +2,16 @@ import Head from "next/head";
 import AccessibleImage from "../images/Icon_image_accessible.svg";
 import HonestImage from "../images/icon_image_honest.svg";
 import EasyPayImage from "../images/icon_image_easypay.svg";
-import FeatureCard from "../components/FeatureCard";
 import PhoneImage from "../images/Mobile_mockup_MKFY.png";
 import HeartImage from "../images/icon_image_heart_hands.svg";
 import TransactionImage from "../images/icon_image_transactions.svg";
 import Image from "next/image";
-import StatisticCard from "../components/StatisticCard";
 import bg from "../images/image_blog_carousel1.png";
 import bg2 from "../images/image_carousel_blog2.png";
-import BlogCard from "../components/BlogCard";
+
+import { BlogCard, FeatureCard, StatisticCard } from "../components/Cards";
+import ContentSection from "../components/ContentSection";
+import { sections } from "../data/sections";
 
 export default function Home() {
     return (
@@ -55,10 +56,11 @@ export default function Home() {
                     </FeatureCard>
                 </div>
             </section>
+
             {/* Quality Banner */}
             <section className="bg-quality-banner h-[482px]">
                 <div className="container h-full flex flex-col justify-center">
-                    <h2 className="font-bold text-lg text-white mb-5">
+                    <h2 className="font-bold text-lg text-white mb-5 max-w-[688px]">
                         MKTFY assures the quality of your purchase
                     </h2>
                     <p className="text-white font-semibold text-base max-w-text leading-7">
@@ -115,26 +117,19 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Businesses section */}
+            <ContentSection
+                imageOrientation="right"
+                margins="mt-[120px] mb-[100px]"
+                {...sections[0]}
+            />
+
             {/* Donate section */}
-            <section>
-                <div className="container h-full flex flex-col justify-center">
-                    <div className="max-w-[417px] py-80">
-                        <h2 className="font-bold text-lg text-gray-500 mb-5">
-                            Looking to make a donation of your stuff? We can
-                            help!
-                        </h2>
-                        <p className=" font-semibold text-base text-gray-500  leading-7">
-                            MKTFY has partnered with Goodwill, Salvation Army
-                            and Women in Need throughout North America. We
-                            strive for a more sustainable future. Contact us to
-                            make a donation.
-                        </p>
-                        <button className="btn-gold mt-11 max-w-btn">
-                            Donate Your Stuff!
-                        </button>
-                    </div>
-                </div>
-            </section>
+            <ContentSection
+                imageOrientation="left"
+                margins="mt-[120px] mb-[240px]"
+                {...sections[1]}
+            />
 
             {/* Statistics Banner */}
             <section className="bg-handshake-banner">
@@ -172,7 +167,7 @@ export default function Home() {
                     <div className="flex gap-10 overflow-x-auto">
                         <BlogCard
                             imageUrl={bg.src}
-                            title="Finding the right sanding desk on MKTFY"
+                            title="Finding the right standing desk on MKTFY"
                             date="BLOG - NOVEMBER 22, 2022"
                         />
                         <BlogCard
