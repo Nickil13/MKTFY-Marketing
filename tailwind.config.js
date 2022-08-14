@@ -55,12 +55,7 @@ module.exports = {
             backgroundImage: {
                 hero: "url(../images/Homepage_image.png)",
                 "quality-banner": "url(../images/banner_devices.png)",
-                "login-clouds": "url(../images/Bg_image_purple_clouds.svg)",
-                "gray-clouds": "url(../assets/images/background_grey.svg)",
-                "about-header":
-                    "url(../assets/images/Image_about_us_header.png)",
-                checkbox: "url(../assets/images/check_box-24px.svg)",
-                "mobile-banner": "url(../assets/images/Banner_mask.png)",
+                "handshake-banner": "url(../images/banner_handshake.png)",
             },
             width: {
                 btn: "345px",

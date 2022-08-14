@@ -4,7 +4,10 @@ import HonestImage from "../images/icon_image_honest.svg";
 import EasyPayImage from "../images/icon_image_easypay.svg";
 import FeatureCard from "../components/FeatureCard";
 import PhoneImage from "../images/Mobile_mockup_MKFY.png";
+import HeartImage from "../images/icon_image_heart_hands.svg";
+import TransactionImage from "../images/icon_image_transactions.svg";
 import Image from "next/image";
+import StatisticCard from "../components/StatisticCard";
 
 export default function Home() {
     return (
@@ -62,6 +65,7 @@ export default function Home() {
                     </p>
                 </div>
             </section>
+
             {/* How it works */}
             <section className="relative h-[848px]">
                 <div className="bg-login-clouds w-[637px] h-full"></div>
@@ -105,6 +109,48 @@ export default function Home() {
                             </p>
                         </li>
                     </ul>
+                </div>
+            </section>
+
+            {/* Donate section */}
+            <section>
+                <div className="container h-full flex flex-col justify-center">
+                    <div className="max-w-[417px] py-80">
+                        <h2 className="font-bold text-lg text-gray-500 mb-5">
+                            Looking to make a donation of your stuff? We can
+                            help!
+                        </h2>
+                        <p className=" font-semibold text-base text-gray-500  leading-7">
+                            MKTFY has partnered with Goodwill, Salvation Army
+                            and Women in Need throughout North America. We
+                            strive for a more sustainable future. Contact us to
+                            make a donation.
+                        </p>
+                        <button className="btn-gold mt-11 max-w-btn">
+                            Donate Your Stuff!
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            {/* Statistics Banner */}
+            <section className="bg-handshake-banner">
+                <div className="container flex justify-between">
+                    <StatisticCard
+                        image={TransactionImage}
+                        value="10,000+"
+                        title="Transactions To Date"
+                    />
+                    <StatisticCard
+                        image={TransactionImage}
+                        value="200K+"
+                        title="MKTFY Active Users"
+                    />
+                    <StatisticCard
+                        image={HeartImage}
+                        value="50+"
+                        title="Partnered Charities"
+                    />
                 </div>
             </section>
         </div>
