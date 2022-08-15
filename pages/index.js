@@ -30,7 +30,7 @@ export default function Home() {
                     <h1 className="font-bold text-[60px] 2xl:text-[80px] text-white leading-[70px] 2xl:leading-[82px] mb-5 max-w-[765px]">
                         Buy and sell stuff on Market For You
                     </h1>
-                    <p className="text-white font-semibold text-base max-w-md leading-7">
+                    <p className="text-white font-semibold text-base max-w-md leading-text">
                         Find the stuff you love in one place. Buy, sell and do
                         it all over again on MKTFY. Signup and get started.
                     </p>
@@ -63,7 +63,7 @@ export default function Home() {
                     <h2 className="font-bold text-lg text-white mb-5 max-w-[688px]">
                         MKTFY assures the quality of your purchase
                     </h2>
-                    <p className="text-white font-semibold text-base max-w-text leading-7">
+                    <p className="text-white font-semibold text-base max-w-text leading-text">
                         MKTFY wants to make sure that the stuff you buy is in
                         working order or your money back. Find out more about
                         our protection policy.

@@ -5,7 +5,7 @@ import Navlink from "./Navlink";
 
 export default function Navbar() {
     return (
-        <nav className="h-[268px] bg-purple-500">
+        <nav className="fixed top-0 w-full h-[268px] bg-purple-500 z-20">
             {/* Container */}
             <div className="flex flex-col justify-end items-start h-full container py-3">
                 <p className="text-sm-17 mb-auto text-white">

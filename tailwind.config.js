@@ -58,19 +58,18 @@ module.exports = {
                 "quality-banner": "url(../images/banner_devices.png)",
                 "handshake-banner": "url(../images/banner_handshake.png)",
                 footer: "url(../images/Footer_banner_bg.svg)",
+                "about-banner": "url(../images/Image_about_us_header.png)",
             },
             width: {
                 btn: "345px",
                 "footer-column": "270px",
             },
             height: {
-                footer: "615px",
-                nav: "191px",
+                footer: "620px",
+                nav: "268px",
                 "mobile-nav": "290px",
                 section: "480px",
-                card: "351px",
-                "card-img": "264px",
-                "card-img-sm": "235px",
+                "charity-list": "85px",
             },
             margin: {
                 15: "60px",
@@ -78,7 +77,7 @@ module.exports = {
             padding: {
                 15: "60px",
                 footer: "615px",
-                nav: "191px",
+                nav: "268px",
                 "mobile-nav": "290px",
             },
             minHeight: {
@@ -100,6 +99,10 @@ module.exports = {
             },
             gridTemplateColumns: {
                 footer: "repeat(3, 272px)",
+            },
+            lineHeight: {
+                title: "50px",
+                text: "30px",
             },
         },
     },

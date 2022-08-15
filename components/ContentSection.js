@@ -33,7 +33,7 @@ export default function ContentSection({
                     <h2 className="font-bold text-lg text-gray-500 mb-5">
                         {header}
                     </h2>
-                    <p className="font-semibold text-base text-gray-500 leading-7">
+                    <p className="font-semibold text-base text-gray-500 leading-text">
                         {content}
                     </p>
                     <button className="btn-gold mt-11 max-w-btn">

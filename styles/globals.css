@@ -9,6 +9,20 @@
     li > a {
         @apply hover:text-gold-200;
     }
+    body {
+        @apply relative min-h-screen pb-footer;
+    }
+    main {
+        @apply pt-nav;
+    }
+
+    .hide-scrollbar {
+        -ms-osverflow-style: none;
+        scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 @layer components {
