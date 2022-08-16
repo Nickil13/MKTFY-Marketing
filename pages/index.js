@@ -1,17 +1,13 @@
 import Head from "next/head";
-import AccessibleImage from "../images/Icon_image_accessible.svg";
-import HonestImage from "../images/icon_image_honest.svg";
-import EasyPayImage from "../images/icon_image_easypay.svg";
-import PhoneImage from "../images/Mobile_mockup_MKFY.png";
-import HeartImage from "../images/icon_image_heart_hands.svg";
-import TransactionImage from "../images/icon_image_transactions.svg";
-import Image from "next/image";
-import bg from "../images/image_blog_carousel1.png";
-import bg2 from "../images/image_carousel_blog2.png";
-
-import { BlogCard, FeatureCard, StatisticCard } from "../components/Cards";
-import ContentSection from "../components/ContentSection";
 import { sections } from "../data/sections";
+import {
+    BlogSection,
+    ContentSection,
+    Hero,
+    HowToSection,
+    FeaturesBanner,
+    StatisticsBanner,
+} from "../components/Home";
 
 export default function Home() {
     return (
@@ -24,38 +20,8 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            {/* Hero */}
-            <div className=" bg-hero bg-cover bg-no-repeat py-20 2xl:py-36">
-                <div className="container h-full flex flex-col justify-center">
-                    <h1 className="font-bold text-[60px] 2xl:text-[80px] text-white leading-[70px] 2xl:leading-[82px] mb-5 max-w-[765px]">
-                        Buy and sell stuff on Market For You
-                    </h1>
-                    <p className="text-white font-semibold text-base max-w-md leading-text">
-                        Find the stuff you love in one place. Buy, sell and do
-                        it all over again on MKTFY. Signup and get started.
-                    </p>
-                    <button className="btn-gold mt-11 max-w-btn">
-                        Sign up
-                    </button>
-                </div>
-            </div>
-            {/* Features */}
-            <section>
-                <div className="container flex justify-between py-15">
-                    <FeatureCard image={AccessibleImage} title="Accessible">
-                        Access MKTFY from anywhere in the world with our easy to
-                        use app. Need a power cable in Italy? We can help!
-                    </FeatureCard>
-                    <FeatureCard image={HonestImage} title="Honest">
-                        Safety and trust are core values of MKTFY. All your
-                        transactions are monitored for fairness and safety.
-                    </FeatureCard>
-                    <FeatureCard image={EasyPayImage} title="Easy Payments">
-                        Arrange payments with between you and our trusted users.
-                        Our application makes it easy to communicate.
-                    </FeatureCard>
-                </div>
-            </section>
+            <Hero />
+            <FeaturesBanner />
 
             {/* Quality Banner */}
             <section className="bg-quality-banner h-[482px]">
@@ -71,51 +37,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* How it works */}
-            <section className="relative h-[848px]">
-                <div className="bg-login-clouds w-[637px] h-full"></div>
-                <div className="absolute top-0 flex h-full w-full justify-center">
-                    <Image src={PhoneImage} alt="mobile app on phone" />
-                    <ul className="px-4 pt-32 max-w-[500px]">
-                        <li className="mb-12">
-                            <h3 className="text-gray-500 text-base font-bold ">
-                                <span className="mr-6 text-[30px]">1</span>
-                                Register and log-in
-                            </h3>
-                            <p className="mr-6 text-gray-footer text-base">
-                                Register as a user on our Market For You App or
-                                web portal through our easy sign-up form. After
-                                you have verified your credentials log-in to
-                                MKTFY and start browsing!
-                            </p>
-                        </li>
-                        <li className="mb-12">
-                            <h3 className="text-gray-500 text-base font-bold ">
-                                <span className="mr-6 text-[30px]">2</span>
-                                Register and log-in
-                            </h3>
-                            <p className="mr-6 text-gray-footer text-base">
-                                Register as a user on our Market For You App or
-                                web portal through our easy sign-up form. After
-                                you have verified your credentials log-in to
-                                MKTFY and start browsing!
-                            </p>
-                        </li>
-                        <li>
-                            <h3 className="text-gray-500 text-base font-bold">
-                                <span className="mr-6 text-[30px]">3</span>
-                                Register and log-in
-                            </h3>
-                            <p className="mr-6 text-gray-footer text-base">
-                                Register as a user on our Market For You App or
-                                web portal through our easy sign-up form. After
-                                you have verified your credentials log-in to
-                                MKTFY and start browsing!
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            <HowToSection />
 
             {/* Businesses section */}
             <ContentSection
@@ -130,54 +52,8 @@ export default function Home() {
                 margins="mt-[120px] mb-[240px]"
                 {...sections[1]}
             />
-
-            {/* Statistics Banner */}
-            <section className="bg-handshake-banner">
-                <div className="container flex justify-between">
-                    <StatisticCard
-                        image={TransactionImage}
-                        value="10,000+"
-                        title="Transactions To Date"
-                    />
-                    <StatisticCard
-                        image={TransactionImage}
-                        value="200K+"
-                        title="MKTFY Active Users"
-                    />
-                    <StatisticCard
-                        image={HeartImage}
-                        value="50+"
-                        title="Partnered Charities"
-                    />
-                </div>
-            </section>
-
-            {/* Blog section */}
-            <section>
-                <div className="container py-32">
-                    <div className="flex justify-between mb-20">
-                        <h2 className="text-gray-500 font-bold text-lg">
-                            Blog
-                        </h2>
-                        <button className="text-gold-200 text-base font-bold">
-                            Visit Blog &gt;
-                        </button>
-                    </div>
-                    {/* Blog entries slider */}
-                    <div className="flex gap-10 overflow-x-auto">
-                        <BlogCard
-                            imageUrl={bg.src}
-                            title="Finding the right standing desk on MKTFY"
-                            date="BLOG - NOVEMBER 22, 2022"
-                        />
-                        <BlogCard
-                            imageUrl={bg2.src}
-                            title="Make memories with MKTFY Event Stuff"
-                            date="BLOG - NOVEMBER 12, 2022"
-                        />
-                    </div>
-                </div>
-            </section>
+            <StatisticsBanner />
+            <BlogSection />
         </div>
     );
 }
