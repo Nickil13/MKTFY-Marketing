@@ -12,9 +12,6 @@
     body {
         @apply relative min-h-screen pb-footer;
     }
-    main {
-        @apply pt-nav;
-    }
 
     .hide-scrollbar {
         -ms-osverflow-style: none;

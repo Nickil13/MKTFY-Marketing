@@ -9,12 +9,16 @@ export async function getStaticProps() {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
     });
 
-    const res = await client.getEntries({ content_type: "post" });
+    const res = await client.getEntries({
+        content_type: "post",
+        order: "-sys.createdAt",
+    });
 
     return {
         props: {
             posts: res.items,
         },
+        revalidate: 1,
     };
 }
 

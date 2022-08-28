@@ -50,8 +50,8 @@ export async function getStaticProps({ params }) {
     /* Call again to get the slug for the next blog post. We can use it to link to the next post. */
     const nextRes = await client.getEntries({
         content_type: "post",
-        order: "sys.createdAt",
-        "sys.createdAt[gt]": post.sys.createdAt,
+        order: "-sys.createdAt",
+        "sys.createdAt[lt]": post.sys.createdAt,
         limit: 1,
     });
 
@@ -61,6 +61,7 @@ export async function getStaticProps({ params }) {
             nextSlug:
                 nextRes.items.length > 0 ? nextRes.items[0].fields.slug : "",
         },
+        revalidate: 1,
     };
 }
 
