@@ -29,12 +29,16 @@ export default function Footer() {
                             </h2>
                             <ul className="flex flex-col gap-7 text-sm-17">
                                 <li>
-                                    <Link href="/about">About us</Link>
+                                    <Link href="/about">
+                                        <a>About us</a>
+                                    </Link>
                                 </li>
                                 <li>MKTFY Business</li>
                                 <li>Donate with MKTFY</li>
                                 <li>
-                                    <Link href="/news">News</Link>
+                                    <Link href="/news">
+                                        <a>News</a>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -44,7 +48,9 @@ export default function Footer() {
                             </h2>
                             <ul className="flex flex-col gap-7 text-sm-17">
                                 <li className="text-gold-200">
-                                    <Link href="/contact">Contact Us</Link>
+                                    <Link href="/contact">
+                                        <a>Contact Us</a>
+                                    </Link>
                                 </li>
                                 <li>+1 888 345 6789</li>
                                 <li>
