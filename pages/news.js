@@ -46,6 +46,7 @@ export default function News({ posts }) {
                                     <img
                                         src={image.fields.file.url}
                                         alt={image.fields.description}
+                                        className="h-[375px]"
                                     />
                                     <h1 className="text-base text-gray-600 font-bold mt-7 mb-1">
                                         {title}
