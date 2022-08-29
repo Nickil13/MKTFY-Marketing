@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import { ImLocation2 } from "react-icons/im";
+import { MdCheckCircle } from "react-icons/md";
+import FormInput from "../components/Input/FormInput";
 
 export default function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [message, setMessage] = useState("");
+    const [messageSent, setMessageSent] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("submitting form");
+        console.log(
+            `Name: ${name}, Email: ${email}, Number: ${phoneNumber}, Message: ${message}`
+        );
+        setMessageSent(true);
+        setName("");
+        setEmail("");
+        setPhoneNumber("");
+        setMessage("");
     };
+
     return (
         <div>
             <div className="h-[407px] bg-contact-banner bg-no-repeat bg-cover"></div>
@@ -36,6 +47,7 @@ export default function Contact() {
                                 name="name"
                                 value={name}
                                 setValue={setName}
+                                capitalize
                             />
                             <FormInput
                                 name="email"
@@ -73,48 +85,55 @@ export default function Contact() {
                                     Your Message
                                 </label>
                             </div>
-                            <button
-                                type="submit"
-                                className="btn-gold max-w-btn ml-auto mt-[73px]"
-                            >
-                                Send Message
-                            </button>
+                            {!messageSent ? (
+                                <button
+                                    type="submit"
+                                    className="btn-gold max-w-btn ml-auto mt-[73px]"
+                                >
+                                    Send Message
+                                </button>
+                            ) : (
+                                <div className="flex items-center ml-auto mt-[73px] text-base font-bold text-purple-400">
+                                    <MdCheckCircle className="mr-2 text-base-lg" />
+                                    <p>Message sent successfully!</p>
+                                </div>
+                            )}
                         </form>
                     </div>
                     <div className="container flex mt-[122px]">
                         <div className="flex">
                             <ImLocation2 className="text-gold-200 text-[94px]" />
-                            <div className="max-w-[272px]">
-                                <div className="flex flex-col text-gray-500 font-bold text-base mb-3">
+                            <ul className="max-w-[272px]">
+                                <li className="flex flex-col text-gray-500 font-bold text-base mb-3">
                                     <h2>Calgary, Alberta</h2>
                                     <span>Our Main Location</span>
-                                </div>
+                                </li>
 
-                                <p className="font-semibold text-gray-footer text-base mb-6">
+                                <li className="font-semibold text-gray-footer text-base mb-6">
                                     Suite 9, 123 1st Street SW, Calgary, Alberta
                                     T2T 7F7
-                                </p>
-                                <span className="font-semibold text-gray-footer text-base">
+                                </li>
+                                <li className="font-semibold text-gray-footer text-base">
                                     +1 888 345 6789
-                                </span>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                         <div className="flex">
                             <ImLocation2 className="text-gold-200 text-[94px]" />
-                            <div className="max-w-[272px]">
-                                <div className="flex flex-col text-gray-500 font-bold text-base mb-3">
+                            <ul className="max-w-[272px]">
+                                <li className="flex flex-col text-gray-500 font-bold text-base mb-3">
                                     <h2>San Fransisco, California</h2>
                                     <span>American Branch</span>
-                                </div>
+                                </li>
 
-                                <p className="font-semibold text-gray-footer text-base mb-6">
+                                <li className="font-semibold text-gray-footer text-base mb-6">
                                     346 Spear St, San Francisco, CA 94105,
                                     United States
-                                </p>
-                                <span className="font-semibold text-gray-footer text-base">
+                                </li>
+                                <li className="font-semibold text-gray-footer text-base">
                                     +1 999 456 7890
-                                </span>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -122,28 +141,3 @@ export default function Contact() {
         </div>
     );
 }
-
-const FormInput = ({ name, value, setValue, placeholderText }) => {
-    return (
-        <div className="flex flex-col-reverse mb-8 max-w-input">
-            <input
-                type="text"
-                name={name}
-                id={name}
-                className={`peer px-6 py-5 rounded border font-semibold 
-                            text-base text-gray-600 placeholder:text-gray-200 border-gray-100 focus:outline-purple-200 focus:outline-2 ${
-                                !value && "bg-[#D7C7DB0D]"
-                            }`}
-                value={value}
-                onChange={(e) => setValue(e.target.value)}
-                placeholder={placeholderText || `Your ${name}`}
-            />
-            <label
-                htmlFor="email"
-                className="text-gray-400 font-semibold text-sm-16 mb-3 capitalize peer-hover:text-purple-600"
-            >
-                {name}
-            </label>
-        </div>
-    );
-};
