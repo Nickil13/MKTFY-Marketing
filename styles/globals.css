@@ -10,9 +10,8 @@
         @apply hover:text-gold-200;
     }
     body {
-        @apply relative min-h-screen pb-footer;
+        @apply relative flex flex-col min-h-screen;
     }
-
     .hide-scrollbar {
         -ms-osverflow-style: none;
         scrollbar-width: none;

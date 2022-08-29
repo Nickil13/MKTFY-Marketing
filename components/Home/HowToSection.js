@@ -5,11 +5,16 @@ import howToSteps from "../../data/howToSteps";
 
 export default function HowToSection() {
     return (
-        <section className="relative h-[848px]">
-            <div className="bg-login-clouds w-[637px] h-full"></div>
-            <div className="absolute top-0 flex h-full w-full justify-center">
-                <Image src={PhoneImage} alt="mobile app on phone" />
-                <ul className="px-4 pt-32 max-w-[500px] ">
+        <section className="relative xlg:h-[848px]">
+            <div className="absolute xlg:static bg-login-clouds bg-no-repeat w-full max-w-[637px] h-full"></div>
+            <div className="xlg:absolute top-0 flex flex-col items-center xlg:flex-row h-full w-full justify-center">
+                <Image
+                    src={PhoneImage}
+                    alt="mobile app on phone"
+                    width={560}
+                    height={848}
+                />
+                <ul className="w-4/5 xlg:w-full px-4 pt-32 max-w-[500px] ">
                     {howToSteps.map(({ stepNumber, title, description }) => {
                         return (
                             <li className="not-last:mb-12" key={stepNumber}>

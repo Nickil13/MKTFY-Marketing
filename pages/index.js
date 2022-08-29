@@ -26,7 +26,7 @@ export default function Home() {
             <FeaturesBanner />
 
             {/* Quality Banner */}
-            <section className="bg-quality-banner h-[482px]">
+            <section className="bg-quality-banner bg-cover bg-no-repeat h-[482px]">
                 <div className="container h-full flex items-center">
                     <div className="flex flex-col">
                         <h2 className="font-bold text-lg text-white mb-5 max-w-[688px]">

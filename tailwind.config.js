@@ -69,7 +69,6 @@ module.exports = {
                 "footer-column": "270px",
             },
             height: {
-                footer: "620px",
                 nav: "268px",
                 "mobile-nav": "290px",
                 section: "480px",
@@ -80,7 +79,6 @@ module.exports = {
             },
             padding: {
                 15: "60px",
-                footer: "615px",
                 nav: "268px",
                 "mobile-nav": "290px",
             },
@@ -92,6 +90,7 @@ module.exports = {
                 btn: "345px",
                 desktop: "1136px",
                 input: "560px",
+                "footer-column": "270px",
             },
             borderRadius: {
                 10: "10px",
@@ -99,9 +98,6 @@ module.exports = {
             boxShadow: {
                 btn: "0px 5px 20px #00000024",
                 form: "0px 7px 12px #00000024",
-            },
-            gridTemplateColumns: {
-                footer: "repeat(3, 272px)",
             },
             lineHeight: {
                 title: "50px",
