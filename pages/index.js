@@ -10,8 +10,28 @@ import {
 } from "../components/Home";
 import playIcon from "../images/Web_arrow.svg";
 import Image from "next/image";
+import { createClient } from "contentful";
 
-export default function Home() {
+export async function getStaticProps() {
+    const client = createClient({
+        space: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    });
+
+    const res = await client.getEntries({
+        content_type: "post",
+        order: "-sys.createdAt",
+    });
+
+    return {
+        props: {
+            posts: res.items.slice(0, 3),
+        },
+        revalidate: 1,
+    };
+}
+
+export default function Home({ posts }) {
     return (
         <div>
             <Head>
@@ -26,8 +46,8 @@ export default function Home() {
             <FeaturesBanner />
 
             {/* Quality Banner */}
-            <section className="bg-quality-banner bg-cover bg-no-repeat h-[482px]">
-                <div className="container h-full flex items-center">
+            <section className="bg-quality-banner bg-cover bg-no-repeat py-[120px]">
+                <div className="container h-full flex flex-wrap items-center">
                     <div className="flex flex-col">
                         <h2 className="font-bold text-lg text-white mb-5 max-w-[688px]">
                             MKTFY assures the quality of your purchase
@@ -58,7 +78,7 @@ export default function Home() {
                 {...sections[1]}
             />
             <StatisticsBanner />
-            <BlogSection />
+            <BlogSection posts={posts} />
         </div>
     );
 }

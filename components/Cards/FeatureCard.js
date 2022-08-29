@@ -9,7 +9,7 @@ export default function FeatureCard({ image, title, children }) {
             <h3 className="text-base font-bold text-gray-500 mb-2.5 mt-9">
                 {title}
             </h3>
-            <p className="text-gray-footer text-sm-16 2xl:text-base font-semibold">
+            <p className="text-gray-footer text-base font-semibold">
                 {children}
             </p>
         </div>

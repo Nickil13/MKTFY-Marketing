@@ -42,11 +42,14 @@ export default function Blog({ posts }) {
                             } = post;
 
                             return (
-                                <div className="w-[560px]" key={index}>
+                                <div
+                                    className="w-full max-w-[560px]"
+                                    key={index}
+                                >
                                     <img
                                         src={image.fields.file.url}
                                         alt={image.fields.description}
-                                        className="h-[375px]"
+                                        className="lg:h-[375px]"
                                     />
                                     <h1 className="text-base text-gray-600 font-bold mt-7 mb-1">
                                         {title}

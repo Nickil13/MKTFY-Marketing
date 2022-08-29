@@ -1,30 +1,36 @@
 import React from "react";
-import bg from "../../images/image_blog_carousel1.png";
-import bg2 from "../../images/image_carousel_blog2.png";
 import { BlogCard } from "../Cards";
+import { MdOutlineArrowDropDownCircle } from "react-icons/md";
+import Link from "next/link";
 
-export default function BlogSection() {
+export default function BlogSection({ posts }) {
     return (
         <section>
             <div className="container py-32">
                 <div className="flex justify-between mb-20">
                     <h2 className="text-gray-500 font-bold text-lg">Blog</h2>
-                    <button className="text-gold-200 text-base font-bold">
-                        Visit Blog &gt;
-                    </button>
+                    <Link href="/blog">
+                        <a className="flex items-center text-base text-gold-200 font-bold">
+                            <span className="mr-2.5">Visit Blog</span>
+                            <MdOutlineArrowDropDownCircle className="-rotate-90 text-[24px]" />
+                        </a>
+                    </Link>
                 </div>
                 {/* Blog entries slider */}
-                <div className="flex gap-10 overflow-x-auto">
-                    <BlogCard
-                        imageUrl={bg.src}
-                        title="Finding the right standing desk on MKTFY"
-                        date="BLOG - NOVEMBER 22, 2022"
-                    />
-                    <BlogCard
-                        imageUrl={bg2.src}
-                        title="Make memories with MKTFY Event Stuff"
-                        date="BLOG - NOVEMBER 12, 2022"
-                    />
+                <div className="flex gap-10 flex-col lg:flex-row lg:overflow-x-auto">
+                    {posts?.map((post, index) => {
+                        const {
+                            fields: { date, image, title },
+                        } = post;
+                        return (
+                            <BlogCard
+                                imageUrl={image.fields.file.url}
+                                title={title}
+                                date={date}
+                                key={index}
+                            />
+                        );
+                    })}
                 </div>
             </div>
         </section>
