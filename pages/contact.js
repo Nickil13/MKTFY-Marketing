@@ -29,15 +29,15 @@ export default function Contact() {
                 <div className="absolute max-w-[1378px] w-full left-1/2 -translate-x-1/2 -top-16">
                     <div className="bg-white px-[121px] py-[47px] shadow-form">
                         <h1 className="text-gray-600 text-lg font-bold mb-3">
-                            Let's start a conversation!
+                            Let&apos;s start a conversation!
                         </h1>
                         <p className="text-base font-semibold text-gray-footer mb-6">
                             At MKTFY your ideas generate real change and
-                            concrete action. We're here to listen, collaborate
-                            and act together. If you have a problem on our app,
-                            interested in working with us, are a business or
-                            want to donate let us know. There are no limits to
-                            what we can do together.
+                            concrete action. We&apos;re here to listen,
+                            collaborate and act together. If you have a problem
+                            on our app, interested in working with us, are a
+                            business or want to donate let us know. There are no
+                            limits to what we can do together.
                         </p>
                         <form
                             onSubmit={handleSubmit}
