@@ -33,7 +33,7 @@ export default function Contact() {
                         </h1>
                         <p className="text-base font-semibold text-gray-footer mb-6">
                             At MKTFY your ideas generate real change and
-                            concrete action. We’re here to listen, collaborate
+                            concrete action. We're here to listen, collaborate
                             and act together. If you have a problem on our app,
                             interested in working with us, are a business or
                             want to donate let us know. There are no limits to
