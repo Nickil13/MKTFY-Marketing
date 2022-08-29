@@ -62,6 +62,7 @@ module.exports = {
                 footer: "url(../images/Footer_banner_bg.svg)",
                 "about-banner": "url(../images/Image_about_us_header.png)",
                 "news-banner": "url(../images/banner_image_news_blog.png)",
+                "contact-banner": "url(../images/banner_image_contact_us.png)",
             },
             width: {
                 btn: "345px",
@@ -86,19 +87,18 @@ module.exports = {
             minHeight: {
                 "listing-card": "312px",
             },
-            maxHeight: {
-                menu: "calc(100vh - 225px)",
-            },
             maxWidth: {
                 text: "417px",
                 btn: "345px",
                 desktop: "1136px",
+                input: "560px",
             },
             borderRadius: {
                 10: "10px",
             },
             boxShadow: {
                 btn: "0px 5px 20px #00000024",
+                form: "0px 7px 12px #00000024",
             },
             gridTemplateColumns: {
                 footer: "repeat(3, 272px)",
