@@ -35,11 +35,11 @@ export async function getStaticProps({ params }) {
         "fields.slug": params.slug,
     });
 
-    /* If the item is not found, redirect back to news */
+    /* If the item is not found, redirect back to blog */
     if (!items.length) {
         return {
             redirect: {
-                destination: "/news",
+                destination: "/blog",
                 permanent: false,
             },
         };
@@ -76,7 +76,7 @@ export default function Post({ post, nextSlug }) {
     return (
         <div>
             <div className="container pt-9 pb-[120px]">
-                <Link href="/news">
+                <Link href="/blog">
                     <a>
                         <MdArrowBack className="text-gold-200 text-lg" />
                     </a>

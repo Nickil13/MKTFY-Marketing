@@ -17,7 +17,7 @@ export default function Navbar() {
                     <ul className="flex gap-14 text-white text-base font-semibold mt-14">
                         <Navlink path="/">Home</Navlink>
                         <Navlink path="/about">About</Navlink>
-                        <Navlink path="/news">News</Navlink>
+                        <Navlink path="/blog">Blog</Navlink>
                         <Navlink path="/contact">Contact</Navlink>
                     </ul>
                     <div className="text-white text-base font-semibold mt-14">

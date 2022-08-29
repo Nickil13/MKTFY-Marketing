@@ -61,7 +61,7 @@ module.exports = {
                 "handshake-banner": "url(../images/banner_handshake.png)",
                 footer: "url(../images/Footer_banner_bg.svg)",
                 "about-banner": "url(../images/Image_about_us_header.png)",
-                "news-banner": "url(../images/banner_image_news_blog.png)",
+                "blog-banner": "url(../images/banner_image_news_blog.png)",
                 "contact-banner": "url(../images/banner_image_contact_us.png)",
             },
             width: {

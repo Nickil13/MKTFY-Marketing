@@ -36,8 +36,8 @@ export default function Footer() {
                                 <li>MKTFY Business</li>
                                 <li>Donate with MKTFY</li>
                                 <li>
-                                    <Link href="/news">
-                                        <a>News</a>
+                                    <Link href="/blog">
+                                        <a>Blog</a>
                                     </Link>
                                 </li>
                             </ul>
