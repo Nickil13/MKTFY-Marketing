@@ -63,6 +63,8 @@ module.exports = {
                 "about-banner": "url(../images/Image_about_us_header.png)",
                 "blog-banner": "url(../images/banner_image_news_blog.png)",
                 "contact-banner": "url(../images/banner_image_contact_us.png)",
+                "about-banner-sm": "url(../images/about_small.jpg)",
+                "blog-banner-sm": "url(../images/blog_small.jpg)",
             },
             width: {
                 btn: "345px",

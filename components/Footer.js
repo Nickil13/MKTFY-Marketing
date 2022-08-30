@@ -27,7 +27,7 @@ export default function Footer() {
                             <h2 className="mb-11 text-base font-semibold">
                                 Jump To:
                             </h2>
-                            <ul className="flex flex-col gap-7 text-sm-17">
+                            <ul className="flex flex-col space-y-7 text-sm-17">
                                 <li>
                                     <Link href="/about">
                                         <a>About us</a>
@@ -46,7 +46,7 @@ export default function Footer() {
                             <h2 className="mb-11 text-base font-semibold">
                                 Contact
                             </h2>
-                            <ul className="flex flex-col gap-7 text-sm-17">
+                            <ul className="flex flex-col space-y-7 text-sm-17">
                                 <li className="text-gold-200">
                                     <Link href="/contact">
                                         <a>Contact Us</a>

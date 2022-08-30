@@ -11,8 +11,7 @@ import Image from "next/image";
 export default function About() {
     return (
         <div>
-            {/* Banner */}
-            <div className="h-[407px] bg-about-banner bg-no-repeat bg-cover"></div>
+            <div className="h-[407px] bg-about-banner-sm lg:bg-about-banner bg-no-repeat bg-cover"></div>
             <div className="container pt-[105px]">
                 <h1 className="text-gray-600 text-center max-w-[950px] mx-auto font-bold text-lg leading-title mb-20">
                     MKTFY is a human centric digital marketplace moving more
@@ -56,43 +55,43 @@ export default function About() {
                     <h2 className="text-gray-600 font-bold text-lg 2xl:mr-15 flex-shrink-0 mb-15 2xl:mb-0">
                         Our Partners
                     </h2>
-                    <ul className="flex flex-row flex-grow flex-wrap 2xl:flex-nowrap items-center justify-center 2xl:justify-start gap-[60px] overflow-auto 2xl:h-charity-list hide-scrollbar">
-                        <li className="relative h-charity-list 2xl:h-full min-w-[330px]">
+                    <ul className="flex flex-row flex-grow flex-wrap 2xl:flex-nowrap items-center justify-center 2xl:justify-start space-y-[60px] 2xl:space-y-0 2xl:space-x-[60px] overflow-auto 2xl:h-charity-list hide-scrollbar">
+                        <li className="relative h-charity-list 2xl:h-full min-w-[330px] mx-2">
                             <Image
                                 src={GoodWillLogo.src}
                                 alt="Goodwill logo"
                                 layout="fill"
                             />
                         </li>
-                        <li className="relative h-charity-list 2xl:h-full min-w-[196px]">
+                        <li className="relative h-charity-list 2xl:h-full min-w-[196px] mx-2">
                             <Image
                                 src={SalvationArmyLogo.src}
                                 alt="Salvation Army logo"
                                 layout="fill"
                             />
                         </li>
-                        <li className="relative h-charity-list 2xl:h-full min-w-[220px]">
+                        <li className="relative h-charity-list 2xl:h-full min-w-[220px] mx-2">
                             <Image
                                 src={WinsLogo.src}
                                 alt="Wins logo"
                                 layout="fill"
                             />
                         </li>
-                        <li className="relative h-charity-list 2xl:h-full min-w-[330px]">
+                        <li className="relative h-charity-list 2xl:h-full min-w-[330px] mx-2">
                             <Image
                                 src={UnicefLogo.src}
                                 alt="Unicef logo"
                                 layout="fill"
                             />
                         </li>
-                        <li className="relative h-charity-list 2xl:h-full min-w-[150px]">
+                        <li className="relative h-charity-list 2xl:h-full min-w-[150px] mx-2">
                             <Image
                                 src={AdidasLogo.src}
                                 alt="Adidas logo"
                                 layout="fill"
                             />
                         </li>
-                        <li className="relative h-charity-list 2xl:h-full min-w-[220px]">
+                        <li className="relative h-charity-list 2xl:h-full min-w-[220px] mx-2">
                             <Image
                                 src={DressLogo.src}
                                 alt="Dress for success logo"

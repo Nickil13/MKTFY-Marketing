@@ -41,7 +41,7 @@ export default function Contact() {
                         </p>
                         <form
                             onSubmit={handleSubmit}
-                            className="flex flex-col flex-wrap max-h-[600px] gap-x-4"
+                            className="flex flex-col flex-wrap max-h-[600px] space-x-4"
                         >
                             <FormInput
                                 name="name"

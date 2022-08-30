@@ -26,7 +26,7 @@ export default function Blog({ posts }) {
     return (
         <div>
             {/* Banner */}
-            <div className="h-[407px] bg-blog-banner bg-no-repeat bg-cover"></div>
+            <div className="h-[407px] bg-blog-banner-sm lg:bg-blog-banner bg-no-repeat bg-cover"></div>
             <div className="container py-28">
                 <div className="grid 2xl:grid-cols-2 gap-4">
                     {posts?.length > 0 ? (
@@ -42,7 +42,7 @@ export default function Blog({ posts }) {
                             } = post;
 
                             return (
-                                <div
+                                <article
                                     className="w-full max-w-[560px]"
                                     key={index}
                                 >
@@ -69,7 +69,7 @@ export default function Blog({ posts }) {
                                             <MdOutlineArrowDropDownCircle className="-rotate-90 text-[24px]" />
                                         </a>
                                     </Link>
-                                </div>
+                                </article>
                             );
                         })
                     ) : (

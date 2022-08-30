@@ -94,7 +94,7 @@ export default function Post({ post, nextSlug }) {
                         src={image.fields.file.url}
                         alt={image.fields.description}
                     />
-                    <div className="text-base text-gray-footer font-semibold mt-[120px] mb-15">
+                    <div className="text-base text-gray-footer font-semibold mt-[60px] 2xl:mt-[120px] mb-15">
                         {paragraphs.map((text, index) => {
                             return (
                                 <p className="mb-7 last:mb-0" key={index}>
