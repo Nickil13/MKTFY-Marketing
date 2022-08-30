@@ -79,8 +79,7 @@ module.exports = {
             },
             padding: {
                 15: "60px",
-                nav: "268px",
-                "mobile-nav": "290px",
+                nav: "90px",
             },
             minHeight: {
                 "listing-card": "312px",
