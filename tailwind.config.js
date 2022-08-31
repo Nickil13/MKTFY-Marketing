@@ -71,8 +71,7 @@ module.exports = {
                 "footer-column": "270px",
             },
             height: {
-                nav: "268px",
-                "mobile-nav": "290px",
+                nav: "182px",
                 section: "480px",
                 "charity-list": "85px",
             },

@@ -6,9 +6,12 @@ export default function FormInput({
     setValue,
     placeholderText,
     capitalize,
+    className,
 }) {
     return (
-        <div className="flex flex-col-reverse mb-8 max-w-input">
+        <div
+            className={`flex flex-col-reverse mb-8 w-full max-w-input ${className}`}
+        >
             <input
                 type="text"
                 name={name}

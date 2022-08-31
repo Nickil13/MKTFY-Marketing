@@ -20,13 +20,14 @@ export default function BlogSection({ posts }) {
                 <div className="flex space-y-10 lg:space-y-0 lg:space-x-10 flex-col lg:flex-row lg:overflow-x-auto">
                     {posts?.map((post, index) => {
                         const {
-                            fields: { date, image, title },
+                            fields: { date, image, title, slug },
                         } = post;
                         return (
                             <BlogCard
                                 imageUrl={image.fields.file.url}
                                 title={title}
                                 date={date}
+                                slug={slug}
                                 key={index}
                             />
                         );

@@ -25,7 +25,7 @@ export default function Navbar() {
         }
     };
     return (
-        <nav className="relative w-full h-[182px] bg-purple-500 z-20">
+        <nav className="relative w-full h-nav bg-purple-500 z-20">
             {/* Upper Navbar segment */}
             <div className="fixed top-0 bg-purple-500 w-full py-3 z-[100]">
                 <p className="container top-3 text-sm-17 mb-auto text-white">
