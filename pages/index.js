@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { sections } from "../data/sections";
 import {
     BlogSection,
     ContentSection,
@@ -11,6 +10,8 @@ import {
 import playIcon from "../images/Web_arrow.svg";
 import Image from "next/image";
 import { createClient } from "contentful";
+import BusinessesImage from "../images/image_electronics_storefront.jpg";
+import DonationsImage from "../images/image_donate_pants.jpg";
 
 export async function getStaticProps() {
     const client = createClient({
@@ -63,19 +64,20 @@ export default function Home({ posts }) {
             </section>
 
             <HowToSection />
-
-            {/* Businesses section */}
             <ContentSection
-                imageOrientation="right"
                 margins="mt-[120px] mb-[100px]"
-                {...sections[0]}
+                header="Are you a business? Check out our MKTFY Storefront!"
+                content="MKTFY prioritizes trusted resalers of electronic or luxury goods on our platform. We work to build a marketplace based on transparency and trust."
+                buttonText="MKTFY Business"
+                imageUrl={BusinessesImage.src}
             />
-
-            {/* Donate section */}
             <ContentSection
-                imageOrientation="left"
                 margins="mt-[120px] mb-[240px]"
-                {...sections[1]}
+                header="Looking to make a donation of your stuff? We can help!"
+                content="MKTFY has partnered with Goodwill, Salvation Army and Women in Need throughout North America. We strive for a more sustainable future. Contact us to make a donation.."
+                buttonText="Donate Your Stuff!"
+                imageUrl={DonationsImage.src}
+                imageOrientation="left"
             />
             <StatisticsBanner />
             <BlogSection posts={posts} />

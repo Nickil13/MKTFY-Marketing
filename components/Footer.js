@@ -63,7 +63,7 @@ export default function Footer() {
                 </div>
                 <div>
                     <p className="text-gray-footer text-sm-17 mt-7 text-center">
-                        Copyright @Launchpad by Vog 2021
+                        Copyright @Launchpad by Vog 2022
                     </p>
                 </div>
             </div>

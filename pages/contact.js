@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ImLocation2 } from "react-icons/im";
 import { MdCheckCircle } from "react-icons/md";
 import FormInput from "../components/Input/FormInput";
+import { formatPhoneNumber } from "../utils/helpers";
 
 export default function Contact() {
     const [name, setName] = useState("");
@@ -9,6 +10,8 @@ export default function Contact() {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [message, setMessage] = useState("");
     const [messageSent, setMessageSent] = useState(false);
+    const [emailError, setEmailError] = useState("");
+    const [phoneError, setPhoneError] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,10 +25,32 @@ export default function Contact() {
         setMessage("");
     };
 
+    const checkValidEmail = (value) => {
+        if (!value || value.match(/^[^\s@]+@[^\s@].[^\s@]+$/) == null) {
+            setEmailError("Your email is incorrect");
+        } else {
+            setEmailError("");
+        }
+    };
+
+    const checkPhoneNumber = (val) => {
+        if (val) {
+            const formattedNumber = formatPhoneNumber(val);
+            if (formattedNumber) {
+                setPhoneNumber(formattedNumber);
+                phoneError && setPhoneError("");
+            } else {
+                setPhoneError("Invalid phone number");
+            }
+        } else {
+            setPhoneError("Invalid phone number");
+        }
+    };
+
     return (
         <div>
-            <div className="h-[407px] bg-contact-banner bg-no-repeat bg-cover"></div>
-            <div className="relative pt-10 xlg:pt-0 xlg:h-[800px] ">
+            <div className="h-banner bg-contact-banner bg-no-repeat bg-cover"></div>
+            <div className="relative pt-10 xlg:pt-0 xlg:h-[800px]">
                 <div className="xlg:absolute max-w-[1378px] w-4/5 mx-auto xlg:left-1/2 xlg:-translate-x-1/2 -top-16">
                     <div className="bg-white px-10 2xl:px-[121px] py-[47px] pt-20 shadow-form">
                         <h1 className="text-gray-600 text-lg font-bold mb-3">
@@ -55,11 +80,15 @@ export default function Contact() {
                                     value={email}
                                     setValue={setEmail}
                                     placeholderText="Your email address"
+                                    onBlur={() => checkValidEmail(email)}
+                                    hasError={emailError}
                                 />
                                 <FormInput
                                     name="mobile number"
                                     value={phoneNumber}
                                     setValue={setPhoneNumber}
+                                    onBlur={() => checkPhoneNumber(phoneNumber)}
+                                    hasError={phoneError}
                                 />
                             </div>
                             <div className="basis-1/2">
@@ -79,7 +108,7 @@ export default function Contact() {
                                     ></textarea>
                                     <label
                                         htmlFor="message"
-                                        className="text-gray-400 font-semibold text-sm-16 mb-3 capitalize peer-hover:text-purple-600"
+                                        className="text-gray-400 font-semibold text-sm-16 mb-3 capitalize peer-focus:text-purple-600"
                                     >
                                         Your Message
                                     </label>
@@ -87,7 +116,15 @@ export default function Contact() {
                                 {!messageSent ? (
                                     <button
                                         type="submit"
-                                        className="btn-gold max-w-btn xlg:ml-auto mt-[73px] "
+                                        className="btn-gold max-w-btn xlg:ml-auto mt-[73px]"
+                                        disabled={
+                                            !name ||
+                                            !email ||
+                                            !phoneNumber ||
+                                            !message ||
+                                            emailError ||
+                                            phoneError
+                                        }
                                     >
                                         Send Message
                                     </button>

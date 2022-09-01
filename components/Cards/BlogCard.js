@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function BlogCard({ imageUrl, title, date, slug }) {
     return (
-        <div className="relative flex h-[400px] lg:h-[618px] bg-cover bg-center bg-no-repeat lg:min-w-[923px]">
+        <div className="relative flex h-[400px] lg:h-[618px] lg:min-w-[923px]">
             <img
-                className="absolute h-full w-full"
+                className="absolute h-full w-full object-cover"
                 src={imageUrl}
                 alt={title}
             />

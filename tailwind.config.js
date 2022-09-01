@@ -66,14 +66,10 @@ module.exports = {
                 "about-banner-sm": "url(../images/about_small.jpg)",
                 "blog-banner-sm": "url(../images/blog_small.jpg)",
             },
-            width: {
-                btn: "345px",
-                "footer-column": "270px",
-            },
             height: {
                 nav: "182px",
-                section: "480px",
                 "charity-list": "85px",
+                banner: "407px",
             },
             margin: {
                 15: "60px",

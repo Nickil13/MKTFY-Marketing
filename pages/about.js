@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function About() {
     return (
         <div>
-            <div className="h-[407px] bg-about-banner-sm lg:bg-about-banner bg-no-repeat bg-cover"></div>
+            <div className="h-banner bg-about-banner-sm lg:bg-about-banner bg-no-repeat bg-cover"></div>
             <div className="container pt-[105px]">
                 <h1 className="text-gray-600 text-center max-w-[950px] mx-auto font-bold text-lg leading-title mb-20">
                     MKTFY is a human centric digital marketplace moving more

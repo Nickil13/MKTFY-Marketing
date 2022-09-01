@@ -17,6 +17,7 @@ export default function BlogSection({ posts }) {
                     </Link>
                 </div>
                 {/* Blog entries slider */}
+
                 <div className="flex space-y-10 lg:space-y-0 lg:space-x-10 flex-col lg:flex-row lg:overflow-x-auto">
                     {posts?.map((post, index) => {
                         const {
