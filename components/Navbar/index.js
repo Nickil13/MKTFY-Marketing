@@ -42,7 +42,7 @@ export default function Navbar() {
 
             {/* Sticky Navbar Btns Segment */}
             <div ref={stickyNav} className="bg-purple-500 w-full pb-3">
-                <div className="container flex flex-wrap items-end justify-between">
+                <div className="container flex flex-col md:flex-row md:items-end justify-between">
                     <ul className="flex space-x-6 lg:space-x-14 text-white text-base font-semibold mt-14">
                         <Navlink path="/">Home</Navlink>
                         <Navlink path="/about">About</Navlink>

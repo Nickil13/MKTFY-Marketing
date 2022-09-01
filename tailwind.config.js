@@ -77,6 +77,7 @@ module.exports = {
             padding: {
                 15: "60px",
                 nav: "90px",
+                "nav-mobile": "140px",
             },
             minHeight: {
                 "listing-card": "312px",
@@ -105,5 +106,6 @@ module.exports = {
         plugin(function ({ addVariant }) {
             addVariant("not-last", ["&:not(:last-child)"]);
         }),
+        require("@tailwindcss/line-clamp"),
     ],
 };
