@@ -22,11 +22,11 @@ export async function getStaticProps() {
     };
 }
 
-export default function News({ posts }) {
+export default function Blog({ posts }) {
     return (
         <div>
             {/* Banner */}
-            <div className="h-[407px] bg-news-banner bg-no-repeat bg-cover"></div>
+            <div className="h-banner bg-blog-banner-sm lg:bg-blog-banner bg-no-repeat bg-cover"></div>
             <div className="container py-28">
                 <div className="grid 2xl:grid-cols-2 gap-4">
                     {posts?.length > 0 ? (
@@ -42,11 +42,14 @@ export default function News({ posts }) {
                             } = post;
 
                             return (
-                                <div className="w-[560px]" key={index}>
+                                <article
+                                    className="w-full max-w-[560px]"
+                                    key={index}
+                                >
                                     <img
                                         src={image.fields.file.url}
                                         alt={image.fields.description}
-                                        className="h-[375px]"
+                                        className="lg:h-[375px]"
                                     />
                                     <h1 className="text-base text-gray-600 font-bold mt-7 mb-1">
                                         {title}
@@ -66,11 +69,11 @@ export default function News({ posts }) {
                                             <MdOutlineArrowDropDownCircle className="-rotate-90 text-[24px]" />
                                         </a>
                                     </Link>
-                                </div>
+                                </article>
                             );
                         })
                     ) : (
-                        <p>No news</p>
+                        <p>No blog posts</p>
                     )}
                 </div>
             </div>

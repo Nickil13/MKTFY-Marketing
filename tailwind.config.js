@@ -42,14 +42,14 @@ module.exports = {
             transparent: "transparent",
         },
         fontSize: {
-            "2xs": "0.75rem",
-            xs: "0.875rem",
-            "sm-16": "1rem",
-            "sm-17": "1.0625rem",
-            base: "1.25rem",
-            "base-lg": "1.75rem",
-            "lg-36": "2.25rem",
-            lg: "2.5rem",
+            "2xs": "var(--2xs)",
+            xs: "var(--xs)",
+            "sm-16": "var(--sm-16)",
+            "sm-17": "var(--sm-17)",
+            base: "var(--base)",
+            "base-lg": "var(--base-lg)",
+            "lg-36": "var(--lg-36)",
+            lg: "var(--lg)",
             inherit: "inherit",
         },
 
@@ -61,28 +61,22 @@ module.exports = {
                 "handshake-banner": "url(../images/banner_handshake.png)",
                 footer: "url(../images/Footer_banner_bg.svg)",
                 "about-banner": "url(../images/Image_about_us_header.png)",
-                "news-banner": "url(../images/banner_image_news_blog.png)",
+                "blog-banner": "url(../images/banner_image_news_blog.png)",
                 "contact-banner": "url(../images/banner_image_contact_us.png)",
-            },
-            width: {
-                btn: "345px",
-                "footer-column": "270px",
+                "about-banner-sm": "url(../images/about_small.jpg)",
+                "blog-banner-sm": "url(../images/blog_small.jpg)",
             },
             height: {
-                footer: "620px",
-                nav: "268px",
-                "mobile-nav": "290px",
-                section: "480px",
+                nav: "182px",
                 "charity-list": "85px",
+                banner: "407px",
             },
             margin: {
                 15: "60px",
             },
             padding: {
                 15: "60px",
-                footer: "615px",
-                nav: "268px",
-                "mobile-nav": "290px",
+                nav: "90px",
             },
             minHeight: {
                 "listing-card": "312px",
@@ -92,6 +86,7 @@ module.exports = {
                 btn: "345px",
                 desktop: "1136px",
                 input: "560px",
+                "footer-column": "270px",
             },
             borderRadius: {
                 10: "10px",
@@ -99,9 +94,6 @@ module.exports = {
             boxShadow: {
                 btn: "0px 5px 20px #00000024",
                 form: "0px 7px 12px #00000024",
-            },
-            gridTemplateColumns: {
-                footer: "repeat(3, 272px)",
             },
             lineHeight: {
                 title: "50px",

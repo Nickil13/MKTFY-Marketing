@@ -5,8 +5,8 @@ import { StatisticCard } from "../Cards";
 
 export default function StatisticsBanner() {
     return (
-        <section className="bg-handshake-banner">
-            <div className="container flex justify-between">
+        <section className="bg-handshake-banner bg-no-repeat bg-cover">
+            <div className="container flex flex-wrap justify-center py-20 space-y-10 md:space-y-0 xlg:justify-between">
                 <StatisticCard
                     image={TransactionImage}
                     value="10,000+"

@@ -7,7 +7,7 @@ import { FeatureCard } from "../Cards";
 export default function FeaturesBanner() {
     return (
         <section>
-            <div className="container flex justify-between py-15">
+            <div className="container flex flex-wrap justify-center space-y-16 lg:space-y-0 py-15 xlg:justify-between">
                 <FeatureCard image={AccessibleImage} title="Accessible">
                     Access MKTFY from anywhere in the world with our easy to use
                     app. Need a power cable in Italy? We can help!

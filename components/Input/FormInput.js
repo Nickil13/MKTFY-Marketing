@@ -6,9 +6,15 @@ export default function FormInput({
     setValue,
     placeholderText,
     capitalize,
+    className,
+    onBlur,
+    hasError,
 }) {
     return (
-        <div className="flex flex-col-reverse mb-8 max-w-input">
+        <div
+            className={`flex flex-col-reverse mb-8 w-full max-w-input ${className}`}
+        >
+            {hasError && <p className="text-red">Invalid {name}</p>}
             <input
                 type="text"
                 name={name}
@@ -22,10 +28,11 @@ export default function FormInput({
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 placeholder={placeholderText || `Your ${name}`}
+                onBlur={onBlur}
             />
             <label
                 htmlFor={name}
-                className="text-gray-400 font-semibold text-sm-16 mb-3 capitalize peer-hover:text-purple-600"
+                className="text-gray-400 font-semibold text-sm-16 mb-3 capitalize peer-focus:text-purple-600"
             >
                 {name}
             </label>

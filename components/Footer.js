@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <div className="absolute bottom-0 w-full bg-footer bg-cover bg-no-repeat h-footer">
-            <div className="container text-white pt-28 divide-y-2">
+        <div className="w-full bg-footer bg-cover bg-no-repeat flex-shrink-0">
+            <div className="container text-white pt-28 divide-y-2 pb-5">
                 <div className="pb-24">
                     <Image
                         src={logo}
@@ -14,8 +14,8 @@ export default function Footer() {
                         height={30}
                         alt="mktfy logo"
                     />
-                    <div className="grid grid-cols-footer gap-40 mt-10 opacity-70">
-                        <div>
+                    <div className="grid lg:grid-flow-col-dense 2xl:grid-cols-3 gap-20 2xl:gap-40 mt-10 opacity-70">
+                        <div className="max-w-footer-column">
                             <p className="font-semibold text-base text-gray-100">
                                 Here at MKTFY we are human centric. We believe
                                 the stuff we buy, share and give are the
@@ -23,11 +23,11 @@ export default function Footer() {
                                 that we do this in a conscious way.
                             </p>
                         </div>
-                        <div>
+                        <div className="max-w-footer-column">
                             <h2 className="mb-11 text-base font-semibold">
                                 Jump To:
                             </h2>
-                            <ul className="flex flex-col gap-7 text-sm-17">
+                            <ul className="flex flex-col space-y-7 text-sm-17">
                                 <li>
                                     <Link href="/about">
                                         <a>About us</a>
@@ -36,17 +36,17 @@ export default function Footer() {
                                 <li>MKTFY Business</li>
                                 <li>Donate with MKTFY</li>
                                 <li>
-                                    <Link href="/news">
-                                        <a>News</a>
+                                    <Link href="/blog">
+                                        <a>Blog</a>
                                     </Link>
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div className="max-w-footer-column">
                             <h2 className="mb-11 text-base font-semibold">
                                 Contact
                             </h2>
-                            <ul className="flex flex-col gap-7 text-sm-17">
+                            <ul className="flex flex-col space-y-7 text-sm-17">
                                 <li className="text-gold-200">
                                     <Link href="/contact">
                                         <a>Contact Us</a>
@@ -63,7 +63,7 @@ export default function Footer() {
                 </div>
                 <div>
                     <p className="text-gray-footer text-sm-17 mt-7 text-center">
-                        Copyright @Launchpad by Vog 2021
+                        Copyright @Launchpad by Vog 2022
                     </p>
                 </div>
             </div>

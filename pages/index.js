@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { sections } from "../data/sections";
 import {
     BlogSection,
     ContentSection,
@@ -8,8 +7,32 @@ import {
     FeaturesBanner,
     StatisticsBanner,
 } from "../components/Home";
+import playIcon from "../images/Web_arrow.svg";
+import Image from "next/image";
+import { createClient } from "contentful";
+import BusinessesImage from "../images/image_electronics_storefront.jpg";
+import DonationsImage from "../images/image_donate_pants.jpg";
 
-export default function Home() {
+export async function getStaticProps() {
+    const client = createClient({
+        space: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    });
+
+    const res = await client.getEntries({
+        content_type: "post",
+        order: "-sys.createdAt",
+    });
+
+    return {
+        props: {
+            posts: res.items.slice(0, 3),
+        },
+        revalidate: 1,
+    };
+}
+
+export default function Home({ posts }) {
     return (
         <div>
             <Head>
@@ -24,36 +47,40 @@ export default function Home() {
             <FeaturesBanner />
 
             {/* Quality Banner */}
-            <section className="bg-quality-banner h-[482px]">
-                <div className="container h-full flex flex-col justify-center">
-                    <h2 className="font-bold text-lg text-white mb-5 max-w-[688px]">
-                        MKTFY assures the quality of your purchase
-                    </h2>
-                    <p className="text-white font-semibold text-base max-w-text leading-text">
-                        MKTFY wants to make sure that the stuff you buy is in
-                        working order or your money back. Find out more about
-                        our protection policy.
-                    </p>
+            <section className="bg-quality-banner bg-cover bg-no-repeat py-[120px]">
+                <div className="container h-full flex flex-wrap items-center">
+                    <div className="flex flex-col">
+                        <h2 className="font-bold text-lg text-white mb-5 max-w-[688px]">
+                            MKTFY assures the quality of your purchase
+                        </h2>
+                        <p className="text-white font-semibold text-base max-w-text leading-text">
+                            MKTFY wants to make sure that the stuff you buy is
+                            in working order or your money back. Find out more
+                            about our protection policy.
+                        </p>
+                    </div>
+                    <Image src={playIcon} w={64} h={64} alt="play icon" />
                 </div>
             </section>
 
             <HowToSection />
-
-            {/* Businesses section */}
             <ContentSection
-                imageOrientation="right"
                 margins="mt-[120px] mb-[100px]"
-                {...sections[0]}
+                header="Are you a business? Check out our MKTFY Storefront!"
+                content="MKTFY prioritizes trusted resalers of electronic or luxury goods on our platform. We work to build a marketplace based on transparency and trust."
+                buttonText="MKTFY Business"
+                imageUrl={BusinessesImage.src}
             />
-
-            {/* Donate section */}
             <ContentSection
-                imageOrientation="left"
                 margins="mt-[120px] mb-[240px]"
-                {...sections[1]}
+                header="Looking to make a donation of your stuff? We can help!"
+                content="MKTFY has partnered with Goodwill, Salvation Army and Women in Need throughout North America. We strive for a more sustainable future. Contact us to make a donation.."
+                buttonText="Donate Your Stuff!"
+                imageUrl={DonationsImage.src}
+                imageOrientation="left"
             />
             <StatisticsBanner />
-            <BlogSection />
+            <BlogSection posts={posts} />
         </div>
     );
 }

@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --2xs: 0.45rem;
+        --xs: 0.6rem;
+        --sm-16: 0.75rem;
+        --sm-17: 0.925rem;
+        --base: 1rem;
+        --base-lg: 1.5rem;
+        --lg-36: 2rem;
+        --lg: 2.25rem;
+    }
+    @screen lg {
+        :root {
+            --2xs: 0.75rem;
+            --xs: 0.875rem;
+            --sm-16: 1rem;
+            --sm-17: 1.0625rem;
+            --base: 1.25rem;
+            --base-lg: 1.75rem;
+            --lg-36: 2.25rem;
+            --lg: 2.5rem;
+        }
+    }
     html {
         font-family: "Open Sans", "sans-serif";
     }
@@ -10,9 +32,8 @@
         @apply hover:text-gold-200;
     }
     body {
-        @apply relative min-h-screen pb-footer;
+        @apply relative flex flex-col min-h-screen;
     }
-
     .hide-scrollbar {
         -ms-osverflow-style: none;
         scrollbar-width: none;
