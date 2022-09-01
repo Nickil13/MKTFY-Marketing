@@ -1,26 +1,56 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --2xs: 0.45rem;
+        --xs: 0.6rem;
+        --sm-16: 0.75rem;
+        --sm-17: 0.925rem;
+        --base: 1rem;
+        --base-lg: 1.5rem;
+        --lg-36: 2rem;
+        --lg: 2.25rem;
+    }
+    @screen lg {
+        :root {
+            --2xs: 0.75rem;
+            --xs: 0.875rem;
+            --sm-16: 1rem;
+            --sm-17: 1.0625rem;
+            --base: 1.25rem;
+            --base-lg: 1.75rem;
+            --lg-36: 2.25rem;
+            --lg: 2.5rem;
+        }
+    }
+    html {
+        font-family: "Open Sans", "sans-serif";
+    }
+    li > a {
+        @apply hover:text-gold-200;
+    }
+    body {
+        @apply relative flex flex-col min-h-screen;
+    }
+    .hide-scrollbar {
+        -ms-osverflow-style: none;
+        scrollbar-width: none;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+@layer components {
+    .container {
+        @apply max-w-desktop mx-auto w-4/5 2xl:w-full;
+    }
+    .btn {
+        @apply text-white font-bold rounded-full shadow-btn disabled:bg-gray-100 disabled:shadow-none disabled:pointer-events-none text-base py-[19px] w-full;
+    }
+    .btn-gold {
+        @apply btn bg-gold-200 hover:bg-gold-100;
+    }
 }
