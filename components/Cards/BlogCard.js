@@ -11,7 +11,7 @@ export default function BlogCard({ imageUrl, title, date, slug }) {
                 alt={title}
             />
             <div className="absolute h-full bg-[#000000]/30 w-full text-white flex flex-col justify-end px-12 pb-15">
-                <h2 className="text-lg-36 font-bold mb-3 leading-title max-w-[511px]">
+                <h2 className="text-lg-36 font-bold mb-3 leading-title max-w-[511px] line-clamp-4">
                     <Link href={`/posts/${slug}`}>
                         <a>{title}</a>
                     </Link>

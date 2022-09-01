@@ -6,7 +6,9 @@ export default function Layout({ children }) {
     return (
         <>
             <Navbar />
-            <main className="pt-nav flex-initial">{children}</main>
+            <main className="pt-nav-mobile md:pt-nav flex-initial">
+                {children}
+            </main>
             <Footer />
         </>
     );
